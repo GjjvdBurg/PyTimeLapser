@@ -1,4 +1,4 @@
-PyTimelapser
+PyTimeLapser
 ============
 
 Simple timelapse creation from a series of webcam images.
@@ -21,4 +21,4 @@ Usage
 Ensure that the image and video directories are created in the current 
 directory. Then run:
 
-    python timelapser.py
+    python pytimelapser.py
