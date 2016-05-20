@@ -120,7 +120,7 @@ class TimeLapse(object):
         print("Making video")
         self.videofile = '%s/%s_timelapse.mp4' % (self.vid_dir, 
                 start_time.strftime('%Y%m%d'))
-        os.system("ffmpeg -f image2 -r 20 -i %s/image_%%05d.jpg -sameq %s" % 
+        os.system("ffmpeg -f image2 -r 20 -i %s/image_%%05d.jpg %s" % 
                 (self.img_dir, self.videofile))
         self.videotitle = 'Timelapse for %s' % (
                 start_time.strftime('%A %B %d, %Y'))
