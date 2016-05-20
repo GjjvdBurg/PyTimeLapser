@@ -14,6 +14,7 @@ VIDEO_DIR = './videos'
 IMAGE_SIZE = (1280, 1024)
 TIMEZONESTRING = 'Europe/Amsterdam'
 SLEEPSEC = 30
+UPLOAD_VIDEO = False
 
 class Recorder(object):
 
@@ -157,7 +158,8 @@ def main():
             time.sleep(wait_secs)
             tl.stop()
             tl.make_video(now)
-            tl.upload_video()
+            if UPLOAD_VIDEO:
+                tl.upload_video()
             tl.cleanup()
     except (KeyboardInterrupt, EOFError):
         pass
